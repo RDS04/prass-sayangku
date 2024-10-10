@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff; /* Soft blue background */
+    position: relative;
+    overflow: hidden;
+}
+
+.bunga {
+    position: absolute;
+    top: 20px; /* Menggeser bunga lebih ke bawah */
+    width: 100px;
+    height: 100px;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.bunga img {
+    width: 100%;
+    height: 100%;
+}
+
+.bunga.left {
+    left: 10px; /* Bunga di pojok kiri dengan sedikit margin */
+    animation-direction: alternate;
+}
+
+.bunga.right {
+    right: 10px; /* Bunga di pojok kanan dengan sedikit margin */
+    animation-direction: alternate-reverse;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.containerdepan {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(201, 218, 238, 0.459);
+    padding: 20px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 300px;
+    z-index: 1; /* Agar konten berada di atas bunga */
+}
+
+.containerdepan h2 {
+    color: #ff69b4; /* Hot pink text */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.containerdepan img {
+    height: 200px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 20%; /* Circular image */
+    margin: 20px 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Image shadow */
+}
+
+.containerdepan a {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.containerdepan a:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+}
+.container-ucapan {
+    text-align: center;
+    margin-top: 120px; /* Menggeser konten ke bawah untuk memberi ruang pada bunga */
+    padding: 30px;
+    background-color: #fff0f5; /* Lavender blush background */
+    border-radius: 15px;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border: 2px solid #ff69b4; /* Pink border */
+}
+
+.container-ucapan img {
+    width: 70%; 
+    /* max-width: 300px; */
+    /* border-radius: 50%;  */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the image */
+    border: 3px solid #ff69b4; /* Pink border around image */
+}
+
+.container-ucapan p {
+    color: #ff69b4; /* Hot pink text */
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 0 20px;
+    font-style: italic;
+}
+
+.container-ucapan p:before {
+    content: "💖 "; /* Tambah icon hati di depan teks */
+}
+
+.container-ucapan p:after {
+    content: " 💖"; /* Tambah icon hati di akhir teks */
+}

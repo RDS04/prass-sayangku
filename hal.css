@@ -1,0 +1,166 @@
+/* Base Styles for Halaman 2 */
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+}
+
+.bunga {
+    position: absolute;
+    top: 20px;
+    width: 100px;
+    height: 100px;
+    animation: floating 4s ease-in-out infinite alternate;
+}
+
+.bunga img {
+    width: 100%;
+    height: 100%;
+}
+
+.bunga.left {
+    left: 10px;
+}
+
+.bunga.right {
+    right: 10px;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.Confes {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    max-width: 90%;
+    margin-top: 470% ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fotokakiza {
+    height: 300px; 
+    width: 200px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    margin: 20px 20px 0; /* Menambah margin atas untuk menggeser ke bawah */
+    transition: transform 0.3s ease;
+}
+
+.Confes img:hover {
+    transform: scale(1.05);
+}
+
+.Confes h2 {
+    font-size: 19px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 900px;
+    margin-top: 70px;
+}
+
+.Confes a {
+    background-color: #d49e9e;
+    padding: 10px 20px;
+    margin-top: 60px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(151, 150, 150);
+    transition: padding 0.3s ease;
+}
+
+.Confes a:hover {
+    padding: 9px 19px;
+}
+
+.container-ucapan {
+    text-align: center;
+    margin-top: 120px;
+    padding: 30px;
+    background-color: #fff0f5;
+    border-radius: 15px;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ff69b4;
+}
+
+.container-ucapan img {
+    width: 70%;
+    margin-bottom: 20px;
+    border: 3px solid #ff69b4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container-ucapan p {
+    color: #ff69b4;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 0 20px;
+    font-style: italic;
+}
+
+.container-ucapan p:before, .container-ucapan p:after {
+    content: "💖";
+}
+.katakata{
+}
+.Confes p {
+    text-align: justify;
+    margin: 20px;
+    line-height: 1.6; /* Menambah jarak antar baris untuk keterbacaan */
+}
+.container-bunga,
+.left,
+.right{
+    padding-top: 100px;
+    margin-top: -100px;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .Confes {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .Confes img {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .Confes h2 {
+        font-size: 17px;
+    }
+
+    .Confes a {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 360px) {
+    .Confes {
+        padding: 10px;
+    }
+
+    .Confes h2 {
+        font-size: 15px;
+    }
+
+    .Confes p {
+        font-size: 14px;
+    }
+}
